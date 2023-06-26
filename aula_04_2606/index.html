@@ -10,19 +10,19 @@
     <!-- <input type="text"> -> Define um campo no formulário -->
     <form>
         Nome:
-        <input type="text" name="nome"><br><br>
+        <input type="text" name="nome" maxlength="15"><br><br>
         
         E-mail:
         <input type="email" name="email" placeholder="email@example.com"><br><br>
         
         Senha:
-        <input type="password" name="senha"><br><br>
+        <input type="password" name="senha" pattern="[0-9]{5,15}"><br><br>
         
         Idade:
-        <input type="number" name="idade"><br><br>
+        <input type="number" name="idade" min="1" max="150"><br><br>
         
         Data de Nascimento:
-        <input type="date" name="dt_nasc"><br><br>
+        <input type="date" name="dt_nasc" max="2023-06-30"><br><br>
         
         Hora:
         <input type="time" name="hora" value="15:00" disabled><br><br>
@@ -86,7 +86,9 @@
         <textarea cols="21" rows="3"></textarea><br>
         <input type="checkbox" role="switch">
         <br>
-        <button>Enviar</button>
+        <button type="submit">Enviar</button>
+        <button type="button">Não faz nada</button> <!--AUXILIA NA EXECUÇÃO DE UM EVENTO JAVASCRIPT-->
+        <button type="reset">Limpa o formulário</button>
     </form>
 </body>
 </html>
